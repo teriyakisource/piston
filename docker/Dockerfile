@@ -15,6 +15,4 @@ RUN add-apt-repository \
     stable"
 RUN apt-get -y install docker-ce
 
-CMD nohup dockerd && \
-    docker import /exec/piston.tar && \
-    sleep infinity
+CMD dockerd
