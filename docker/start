@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+dir="$( cd "$( dirname "$0" )" && pwd )"
+
+docker run \
+    -d \
+    --rm \
+    --privileged=true \
+    -v $dir/exec:/exec:ro \
+    piston_wrapper
